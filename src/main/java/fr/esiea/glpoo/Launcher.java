@@ -10,21 +10,22 @@ import fr.esiea.glpoo.dao.TirageDao;
 import fr.esiea.glpoo.tirage.Tirage;
 
 public class Launcher {
-	private final static Logger logger =  Logger.getLogger(Launcher.class);
+	private final static Logger logger = Logger.getLogger(Launcher.class);
+
 	public static void main(String[] args) throws Exception {
 		logger.info("Hello");
-		
+
 		final String fileName = "src/main/resources/my_euromillions.csv";
-		
+
 		final File file = new File(fileName);
 		final TirageDao dao = new CsvTirageDao();
 		dao.init(file);
-		
+
 		final List<Tirage> tirages = dao.findAllTirage();
-		
-		for(final Tirage tirage : tirages) {
+
+		for (final Tirage tirage : tirages) {
 			logger.debug("* " + tirage.getAnnee());
 		}
-		
+
 	}
 }

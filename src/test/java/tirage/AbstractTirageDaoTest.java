@@ -11,7 +11,7 @@ import fr.esiea.glpoo.tirage.Tirage;
 public abstract class AbstractTirageDaoTest {
 
 	protected TirageDao dao;
-	
+
 	@Test
 	public void testAnnee() throws Exception {
 		final int expectedAnnee = 2016078;
@@ -19,110 +19,93 @@ public abstract class AbstractTirageDaoTest {
 		final int annee = tirages.get(0).getAnnee();
 		Assert.assertEquals(expectedAnnee, annee);
 	}
-	
+
 	@Test
 	public void testDay() throws Exception {
 		final String expectedDay = "MARDI";
 		final List<Tirage> tirages = dao.findAllTirage();
 		final String day = tirages.get(0).getJour();
-		Assert.assertEquals(expectedDay,day);
+		Assert.assertEquals(expectedDay, day);
 	}
-	
+
 	@Test
 	public void testDate() throws Exception {
-		final String[] expected = {"27","09","2016"};
+		final String[] expected = { "27", "09", "2016" };
 		final List<Tirage> tirages = dao.findAllTirage();
 		final String[] tableDate = tirages.get(0).getDate();
-		Assert.assertArrayEquals(expected,tableDate);
+		Assert.assertArrayEquals(expected, tableDate);
 	}
-	
+
 	@Test
 	public void testEndDate() throws Exception {
-		final String[] expected = {"27","11","2016"};
+		final String[] expected = { "27", "11", "2016" };
 		final List<Tirage> tirages = dao.findAllTirage();
 		final String[] tableEndDate = tirages.get(0).getDateFermeture();
-		Assert.assertArrayEquals(expected,tableEndDate);
+		Assert.assertArrayEquals(expected, tableEndDate);
 	}
-	
+
 	@Test
 	public void testNumTirage() throws Exception {
 		final int expected = 1;
 		final List<Tirage> tirages = dao.findAllTirage();
 		final int numero = tirages.get(0).getNumeroTirage();
-		Assert.assertEquals(expected,numero);
+		Assert.assertEquals(expected, numero);
 	}
-	
+
 	@Test
 	public void testBoule1() throws Exception {
 		final int expected = 41;
 		final List<Tirage> tirages = dao.findAllTirage();
 		final int boule = tirages.get(0).getBoule1();
-		Assert.assertEquals(expected,boule);
+		Assert.assertEquals(expected, boule);
 	}
-	
+
 	@Test
 	public void testBoule2() throws Exception {
 		final int expected = 6;
 		final List<Tirage> tirages = dao.findAllTirage();
 		final int boule = tirages.get(0).getBoule2();
-		Assert.assertEquals(expected,boule);
+		Assert.assertEquals(expected, boule);
 	}
-	
+
 	@Test
 	public void testBoule3() throws Exception {
 		final int expected = 13;
 		final List<Tirage> tirages = dao.findAllTirage();
 		final int boule = tirages.get(0).getBoule3();
-		Assert.assertEquals(expected,boule);
+		Assert.assertEquals(expected, boule);
 	}
-	
+
 	@Test
 	public void testBoule4() throws Exception {
 		final int expected = 39;
 		final List<Tirage> tirages = dao.findAllTirage();
 		final int boule = tirages.get(0).getBoule4();
-		Assert.assertEquals(expected,boule);
+		Assert.assertEquals(expected, boule);
 	}
-	
+
 	@Test
 	public void testBoule5() throws Exception {
 		final int expected = 9;
 		final List<Tirage> tirages = dao.findAllTirage();
 		final int boule = tirages.get(0).getBoule5();
-		Assert.assertEquals(expected,boule);
+		Assert.assertEquals(expected, boule);
 	}
-	
+
 	@Test
 	public void testEtoile1() throws Exception {
 		final int expected = 2;
 		final List<Tirage> tirages = dao.findAllTirage();
 		final int etoile = tirages.get(0).getEtoile1();
-		Assert.assertEquals(expected,etoile);
+		Assert.assertEquals(expected, etoile);
 	}
-	
+
 	@Test
 	public void testEtoile2() throws Exception {
 		final int expected = 12;
 		final List<Tirage> tirages = dao.findAllTirage();
 		final int etoile = tirages.get(0).getEtoile2();
-		Assert.assertEquals(expected,etoile);
+		Assert.assertEquals(expected, etoile);
 	}
-	
-	/*@Test
-	public void testTableBoule() throws Exception {
-		final String[] expected = {"6","9","13","39","41"};
-		final List<Tirage> tirages = dao.findAllTirage();
-		final String[] table = tirages.get(0).getBoules();
-		Assert.assertArrayEquals(expected,table);
-	}*/
-	
-	/*@Test
-	public void testTableEtoile() throws Exception {
-		final String[] expected = {"2","12"};
-		final List<Tirage> tirages = dao.findAllTirage();
-		final String[] table = tirages.get(0).getEtoiles();
-		Assert.assertArrayEquals(expected,table);
-	}*/
-	
-	
+
 }
