@@ -30,12 +30,18 @@ public abstract class AbstractTirageDaoTest {
 	
 	@Test
 	public void testDate() throws Exception {
-		throw new IllegalArgumentException("not implemented");
+		final String[] expected = {"27","09","2016"};
+		final List<Tirage> tirages = dao.findAllTirage();
+		final String[] tableDate = tirages.get(0).getDate();
+		Assert.assertArrayEquals(expected,tableDate);
 	}
 	
 	@Test
 	public void testEndDate() throws Exception {
-		throw new IllegalArgumentException("not implemented");
+		final String[] expected = {"27","11","2016"};
+		final List<Tirage> tirages = dao.findAllTirage();
+		final String[] tableEndDate = tirages.get(0).getDateFermeture();
+		Assert.assertArrayEquals(expected,tableEndDate);
 	}
 	
 	@Test
@@ -104,22 +110,18 @@ public abstract class AbstractTirageDaoTest {
 	
 	@Test
 	public void testTableBoule() throws Exception {
-		throw new IllegalArgumentException("not implemented");
+		final String[] expected = {"6","9","13","39","41"};
+		final List<Tirage> tirages = dao.findAllTirage();
+		final String[] table = tirages.get(0).getBoules();
+		Assert.assertArrayEquals(expected,table);
 	}
 	
 	@Test
 	public void testTableEtoile() throws Exception {
-		throw new IllegalArgumentException("not implemented");
-	}
-	
-	@Test
-	public void testBoule1InTable() throws Exception {
-		final String expectedResult = "6";
+		final String[] expected = {"2","12"};
 		final List<Tirage> tirages = dao.findAllTirage();
-		final String[] tableBoule1 = tirages.get(0).getBoules();
-		final String boule1 = tableBoule1[0];
-		
-		Assert.assertEquals(expectedResult, boule1);
+		final String[] table = tirages.get(0).getEtoiles();
+		Assert.assertArrayEquals(expected,table);
 	}
 	
 	

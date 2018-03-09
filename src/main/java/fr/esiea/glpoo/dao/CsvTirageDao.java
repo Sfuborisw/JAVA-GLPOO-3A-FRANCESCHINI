@@ -104,7 +104,7 @@ public class CsvTirageDao implements TirageDao {
 		final String[] tempTableBoule = values[12].split(tableSeprator);
 		final String[] boules = tempTableBoule;
 		tirage.setBoules(boules);
-		// Recuperation du tableu des etoiles gagnantes
+		// Recuperation du tableau des etoiles gagnantes
 		final String[] tempTableEtoile = values[13].split(tableSeprator);
 		final String[] etoiles = tempTableEtoile;
 		tirage.setBoules(etoiles);
