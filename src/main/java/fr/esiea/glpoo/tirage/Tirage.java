@@ -26,7 +26,7 @@ public interface Tirage {
 
 	public int getEtoile2();
 
-	public String[] getBoules();
+	//public String[] getBoules();
 
-	public String[] getEtoiles();
+	//public String[] getEtoiles();
 }

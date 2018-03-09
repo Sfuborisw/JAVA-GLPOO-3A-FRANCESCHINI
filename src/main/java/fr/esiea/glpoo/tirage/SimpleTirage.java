@@ -13,15 +13,15 @@ public class SimpleTirage implements Tirage {
 	private int boule5;
 	private int etoile1;
 	private int etoile2;
-	private String[] boules;
-	private String[] etoiles;
+	//private String[] boules;
+	//private String[] etoiles;
 
 	public SimpleTirage() {
 		super();
 	}
 
 	public SimpleTirage(int annee, String jour, String[] date, int numeroTirage, String[] dateFermeture, int boule1,
-			int boule2, int boule3, int boule4, int boule5, int etoile1, int etoile2, String[] boules, String[] etoiles) {
+			int boule2, int boule3, int boule4, int boule5, int etoile1, int etoile2/*, String[] boules, String[] etoiles*/) {
 		this();
 		this.annee = annee;
 		this.jour = jour;
@@ -35,8 +35,8 @@ public class SimpleTirage implements Tirage {
 		this.boule5 = boule5;
 		this.etoile1 = etoile1;
 		this.etoile2 = etoile2;
-		this.boules = boules;
-		this.etoiles = etoiles;
+		//this.boules = boules;
+		//this.etoiles = etoiles;
 	}
 
 	public int getAnnee() {
@@ -135,19 +135,19 @@ public class SimpleTirage implements Tirage {
 		this.etoile2 = etoile2;
 	}
 
-	public String[] getBoules() {
+	/*public String[] getBoules() {
 		return boules;
-	}
+	}*/
 
-	public void setBoules(String[] boules) {
+	/*public void setBoules(String[] boules) {
 		this.boules = boules;
-	}
+	}*/
 
-	public String[] getEtoiles() {
+	/*public String[] getEtoiles() {
 		return etoiles;
-	}
+	}*/
 
-	public void setEtoiles(String[] etoiles) {
+	/*public void setEtoiles(String[] etoiles) {
 		this.etoiles = etoiles;
-	}
+	}*/
 }

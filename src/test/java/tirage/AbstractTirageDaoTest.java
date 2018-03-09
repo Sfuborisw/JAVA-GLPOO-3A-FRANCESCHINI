@@ -108,21 +108,21 @@ public abstract class AbstractTirageDaoTest {
 		Assert.assertEquals(expected,etoile);
 	}
 	
-	@Test
+	/*@Test
 	public void testTableBoule() throws Exception {
 		final String[] expected = {"6","9","13","39","41"};
 		final List<Tirage> tirages = dao.findAllTirage();
 		final String[] table = tirages.get(0).getBoules();
 		Assert.assertArrayEquals(expected,table);
-	}
+	}*/
 	
-	@Test
+	/*@Test
 	public void testTableEtoile() throws Exception {
 		final String[] expected = {"2","12"};
 		final List<Tirage> tirages = dao.findAllTirage();
 		final String[] table = tirages.get(0).getEtoiles();
 		Assert.assertArrayEquals(expected,table);
-	}
+	}*/
 	
 	
 }

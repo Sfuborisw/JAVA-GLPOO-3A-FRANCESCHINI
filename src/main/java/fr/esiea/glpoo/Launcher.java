@@ -23,7 +23,7 @@ public class Launcher {
 		final List<Tirage> tirages = dao.findAllTirage();
 		
 		for(final Tirage tirage : tirages) {
-			logger.debug("* " + tirage.getAnnee() + tirage.getBoules()[0] + " END");
+			logger.debug("* " + tirage.getAnnee());
 		}
 		
 	}

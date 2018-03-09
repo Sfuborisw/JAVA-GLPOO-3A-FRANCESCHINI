@@ -100,14 +100,14 @@ public class CsvTirageDao implements TirageDao {
 		final int etoile2 = Integer.parseInt(tempEtoile2);
 		tirage.setEtoile2(etoile2);
 		// Recuperation du tableau des boules gagnantes
-		final String tableSeprator = "-";
-		final String[] tempTableBoule = values[12].split(tableSeprator);
-		final String[] boules = tempTableBoule;
-		tirage.setBoules(boules);
+		//final String tableSeprator = "-";
+		//final String[] tempTableBoule = values[12].split(tableSeprator);
+		//final String[] boules = tempTableBoule;
+		//tirage.setBoules(boules);
 		// Recuperation du tableau des etoiles gagnantes
-		final String[] tempTableEtoile = values[13].split(tableSeprator);
-		final String[] etoiles = tempTableEtoile;
-		tirage.setBoules(etoiles);
+		//final String[] tempTableEtoile = values[13].split(tableSeprator);
+		//final String[] etoiles = tempTableEtoile;
+		//tirage.setBoules(etoiles);
 		
 		return tirage;
 	}
