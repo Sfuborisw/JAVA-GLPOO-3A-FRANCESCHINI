@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 
 import fr.esiea.glpoo.dao.CsvTirageDao;
 import fr.esiea.glpoo.dao.TirageDao;
+import fr.esiea.glpoo.ihm.Tree;
 import fr.esiea.glpoo.tirage.Tirage;
 
 public class Launcher {
@@ -26,6 +27,9 @@ public class Launcher {
 		for (final Tirage tirage : tirages) {
 			logger.debug("* " + tirage.getAnnee());
 		}
+		
+		final Tree fenetre = new Tree();
+		fenetre.setVisible(true);
 
 	}
 }
