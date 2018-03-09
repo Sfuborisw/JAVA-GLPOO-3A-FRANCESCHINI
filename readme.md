@@ -11,3 +11,22 @@ Membre de l'équipe :
 	* Younes Ghenai
 	* William Choukroun
 	* Kevin Berdarh
+	
+But du Projet :
+---------------
+
+
+Ce que nous allons faire :
+--------------------------
+
+
+Etat d'avancement du projet (TODO LIST) :
+-----------------------------------------
+
+	- [x] Tirage
+		- [x] SimpleTirage.java
+		- [x] Tirage.java
+	- [x] Dao
+		- [x] CSVTirageDao.java
+		- [x] TirageDao.java
+	- [ ] IHM
