@@ -6,7 +6,13 @@ import java.util.Random;
 
 import javax.swing.JFrame;
 
+import org.apache.log4j.Logger;
+
+
 public class Tree extends JFrame {
+	private final static Logger log = Logger.getLogger(Launcher.class);
+	private final TreeModele modele = new TreeModele();
+	
 	
     public Tree() {
         super("Fractal Tree");
