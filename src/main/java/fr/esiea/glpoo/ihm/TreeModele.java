@@ -12,10 +12,11 @@ import fr.esiea.glpoo.dao.CsvTirageDao;
 import fr.esiea.glpoo.dao.TirageDao;
 import fr.esiea.glpoo.tirage.Tirage;
 
+@SuppressWarnings("serial")
 public class TreeModele extends AbstractTableModel {
 	private final String[] headers;
 	private List<Tirage> tirages;
-	//private final static Logger log = Logger.getLogger(Launcher.class);
+	// private final static Logger log = Logger.getLogger(Launcher.class);
 
 	public TreeModele() throws Exception {
 		headers = new String[] { "Annee", "Jour", "Date", "Numero", "Date Fermeture", "Boule 1", "Boule 2", "Boule 3",
@@ -107,6 +108,10 @@ public class TreeModele extends AbstractTableModel {
 			return Object.class;
 
 		}
+	}
+
+	public Tirage randomTree(int value) {
+		return tirages.get(value);
 	}
 
 }

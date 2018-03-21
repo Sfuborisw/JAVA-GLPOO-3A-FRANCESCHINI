@@ -1,32 +1,31 @@
-Projet De GLPOO 3A ESIEA 2017 - 2018
-------------------------------------
+#Projet De GLPOO 3A ESIEA 2017 - 2018
 
-Membre de l'équipe :
---------------------
 
-	* Joffrey Franceschini
-	* Ilyes Ihadjadene
-	* Mehdi Soltana
-	* Nizar Zidouh
-	* Younes Ghenai
-	* William Choukroun
-	* Kevin Berdarh
+###Membre de l'équipe :
+
+
+* Joffrey Franceschini
+* Ilyes Ihadjadene
+* Mehdi Soltana
+* Nizar Zidouh
+* Younes Ghenai
+* William Choukroun
+* Kevin Berdarh
 	
-But du Projet :
----------------
+###But du Projet :
 
 
-Ce que nous allons faire :
---------------------------
 
+###Ce que nous allons faire :
 
-Etat d'avancement du projet (TODO LIST) :
------------------------------------------
+Nous avons décidés de créer des arbres fractal en fonction des tirages du loto sorti.
 
-	- [x] Tirage
-		- [x] SimpleTirage.java
-		- [x] Tirage.java
-	- [x] Dao
-		- [x] CSVTirageDao.java
-		- [x] TirageDao.java
-	- [ ] IHM
+###Etat d'avancement du projet (TODO LIST) :
+
+- [x] Test work 12 / 12 100%
+- [x] Tirage
+- [x] Dao
+- [ ] IHM
+	- Save as Png need to be implement
+	- Refresh with button New Random Tree need to be fix
+	

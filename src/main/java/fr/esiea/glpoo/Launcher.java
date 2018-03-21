@@ -27,7 +27,7 @@ public class Launcher {
 		for (final Tirage tirage : tirages) {
 			logger.debug("* " + tirage.getAnnee());
 		}
-		
+
 		final Tree fenetre = new Tree();
 		fenetre.setVisible(true);
 
