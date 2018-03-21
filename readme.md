@@ -15,10 +15,10 @@ Project Goal :
 ==============
 
 
-What we going to do :
+What we are going to do :
 =====================
 
-We are hoping to create Fractal Tree in function of LOTO results
+We are hoping to create Fractal Tree in function of LOTO results.
 
 TODO LIST :
 ===========
