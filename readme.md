@@ -1,8 +1,7 @@
-#Projet De GLPOO 3A ESIEA 2017 - 2018
-
-
-###Membre de l'équipe :
-
+Projet De GLPOO 3A ESIEA 2017 - 2018
+------------------------------------
+Team Members :
+==============
 
 * Joffrey Franceschini
 * Ilyes Ihadjadene
@@ -12,15 +11,17 @@
 * William Choukroun
 * Kevin Berdarh
 	
-###But du Projet :
+Project Goal :
+==============
 
 
+What we going to do :
+=====================
 
-###Ce que nous allons faire :
+We are hoping to create Fractal Tree in function of LOTO results
 
-Nous avons décidés de créer des arbres fractal en fonction des tirages du loto sorti.
-
-###Etat d'avancement du projet (TODO LIST) :
+TODO LIST :
+===========
 
 - [x] Test work 12 / 12 100%
 - [x] Tirage
