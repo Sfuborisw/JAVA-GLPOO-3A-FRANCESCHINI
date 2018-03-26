@@ -16,7 +16,7 @@ public class MyDrawPanel extends JPanel {
 	public void paintComponent(Graphics g) {
 		g.setColor(new Color(red, green, blue));
 		setBackground(Color.WHITE);
-		drawTree(g, getWidth() / 2 , getHeight() / 2, angle, depth);
+		drawTree(g, getWidth() / 2 , getHeight() / 2,  - angle, depth);
 	}
 
 	private void drawTree(Graphics g, int x1, int y1, double angle, int depth) {

@@ -24,9 +24,10 @@ import fr.esiea.glpoo.tirage.Tirage;
 public class Tree extends JFrame {
 	private static final long serialVersionUID = 1L;
 	JFrame frame;
-	JPanel DrawPanel;
 	JButton btn_ramdom, btn_save;
 	private final static Logger log = Logger.getLogger(Launcher.class);
+
+	MyDrawPanel DrawPanel;
 
 	private List<Tirage> tirages;
 	private Tirage tirageEnCours = new SimpleTirage();
@@ -39,28 +40,33 @@ public class Tree extends JFrame {
 		final TirageDao dao = new CsvTirageDao();
 		dao.init(file);
 		tirages = dao.findAllTirage();
+
 		if (first == true) {
 			tirageEnCours = tirages.get(0);
 		}
 
-		frame = new JFrame();
+		frame = new JFrame("Fractal Tree");
+		
+		frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 		btn_ramdom = new JButton(new RandomTree());
 		btn_save = new JButton(new SaveAsPng());
+
 		final JPanel barreButton = new JPanel();
 		barreButton.add(btn_ramdom);
 		barreButton.add(btn_save);
 
-		MyDrawPanel DrawPanel = new MyDrawPanel();
+		DrawPanel = new MyDrawPanel();
 
 		frame.getContentPane().add(BorderLayout.SOUTH, barreButton);
 		frame.getContentPane().add(BorderLayout.CENTER, DrawPanel);
 		DrawPanel.setColor(tirageEnCours);
 		DrawPanel.setAngle(tirageEnCours);
 		DrawPanel.setDepth(tirageEnCours);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+		
 		frame.setVisible(true);
-		frame.setTitle("Fractal Tree");
+
 	}
 
 	private class RandomTree extends AbstractAction {
@@ -79,7 +85,13 @@ public class Tree extends JFrame {
 			tirageEnCours = tirages.get(value);
 			log.debug("test some value " + tirageEnCours.getBoule1());
 			first = false;
-			//update screen here
+			DrawPanel.removeAll();
+			DrawPanel.validate();
+			DrawPanel.setColor(tirageEnCours);
+			DrawPanel.setAngle(tirageEnCours);
+			DrawPanel.setDepth(tirageEnCours);
+			DrawPanel.revalidate();
+			DrawPanel.repaint();
 		}
 
 	}
