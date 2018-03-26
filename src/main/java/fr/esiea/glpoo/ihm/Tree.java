@@ -1,17 +1,22 @@
 package fr.esiea.glpoo.ihm;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Desktop;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.io.File;
-
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
 import java.util.List;
 import java.util.Random;
 
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 import org.apache.log4j.Logger;
 
@@ -25,6 +30,7 @@ public class Tree extends JFrame {
 	private static final long serialVersionUID = 1L;
 	JFrame frame;
 	JButton btn_ramdom, btn_save;
+	JTextArea textArea;
 	private final static Logger log = Logger.getLogger(Launcher.class);
 
 	MyDrawPanel DrawPanel;
@@ -46,7 +52,8 @@ public class Tree extends JFrame {
 		}
 
 		frame = new JFrame("Fractal Tree");
-		
+		textArea = new JTextArea(24, 80);
+
 		frame.setExtendedState(Frame.MAXIMIZED_BOTH);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -61,10 +68,11 @@ public class Tree extends JFrame {
 
 		frame.getContentPane().add(BorderLayout.SOUTH, barreButton);
 		frame.getContentPane().add(BorderLayout.CENTER, DrawPanel);
+		DrawPanel.setBackground(Color.WHITE);
 		DrawPanel.setColor(tirageEnCours);
 		DrawPanel.setAngle(tirageEnCours);
 		DrawPanel.setDepth(tirageEnCours);
-		
+
 		frame.setVisible(true);
 
 	}
@@ -107,6 +115,16 @@ public class Tree extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			// TODO save as a png our fractal tree
 			log.info("soon....");
+			/*
+			 * JFileChooser chooser = new JFileChooser(); int retval =
+			 * chooser.showSaveDialog(btn_save); if(retval == JFileChooser.APPROVE_OPTION) {
+			 * File file = chooser.getSelectedFile(); if (file == null) { return; }
+			 * if(!file.getName().toLowerCase().endsWith(".png")) { file = new
+			 * File(file.getParentFile(),file.getName() + ".png"); } try {
+			 * textArea.write(new OutputStreamWriter(new FileOutputStream(file),"utf-8"));
+			 * Desktop.getDesktop().open(file); } catch (Exception except) {
+			 * except.printStackTrace(); } }
+			 */
 		}
 
 	}

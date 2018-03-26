@@ -11,12 +11,13 @@ public class MyDrawPanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 	private int red, blue, green, depth;
+	@SuppressWarnings("unused")
 	private double angle;
 
 	public void paintComponent(Graphics g) {
 		g.setColor(new Color(red, green, blue));
 		setBackground(Color.WHITE);
-		drawTree(g, getWidth() / 2 , getHeight() / 2,  - angle, depth);
+		drawTree(g, getWidth() / 2, (getHeight() / 2) + 300, -90, depth);
 	}
 
 	private void drawTree(Graphics g, int x1, int y1, double angle, int depth) {
