@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 
 import fr.esiea.glpoo.dao.CsvTirageDao;
 import fr.esiea.glpoo.dao.TirageDao;
+import fr.esiea.glpoo.ihm.MainMenu;
 import fr.esiea.glpoo.ihm.Tree;
 import fr.esiea.glpoo.tirage.Tirage;
 
@@ -28,8 +29,10 @@ public class Launcher {
 			logger.debug("* " + tirage.getAnnee());
 		}
 
-		final Tree fenetre = new Tree();
-		fenetre.setVisible(true);
+		@SuppressWarnings("unused")
+		final MainMenu test = new MainMenu();
+		//final Tree fenetre = new Tree();
+		//fenetre.setVisible(true);
 
 	}
 }
