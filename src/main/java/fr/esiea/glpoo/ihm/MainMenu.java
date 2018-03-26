@@ -61,8 +61,14 @@ public class MainMenu extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
 			log.debug("Ici on lance la fenetre pour les arbres fractal");
+			try {
+				@SuppressWarnings("unused")
+				final Tree tree = new Tree();
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+			frame.dispose();
 		}
 		
 	}
@@ -79,7 +85,13 @@ public class MainMenu extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
 			log.debug("Ici on lance la fenetre pour les triangles fractal");
-			
+			try {
+				@SuppressWarnings("unused")
+				final Triangle triange = new Triangle();
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+			frame.dispose();
 		}
 		
 	}
