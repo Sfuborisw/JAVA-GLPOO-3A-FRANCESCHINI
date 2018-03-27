@@ -70,7 +70,6 @@ public class Tree extends JFrame {
 		frame.getContentPane().add(BorderLayout.CENTER, DrawPanel);
 		DrawPanel.setBackground(Color.WHITE);
 		DrawPanel.setColor(tirageEnCours);
-		DrawPanel.setAngle(tirageEnCours);
 		DrawPanel.setDepth(tirageEnCours);
 
 		frame.setVisible(true);
@@ -96,7 +95,6 @@ public class Tree extends JFrame {
 			DrawPanel.removeAll();
 			DrawPanel.validate();
 			DrawPanel.setColor(tirageEnCours);
-			DrawPanel.setAngle(tirageEnCours);
 			DrawPanel.setDepth(tirageEnCours);
 			DrawPanel.revalidate();
 			DrawPanel.repaint();

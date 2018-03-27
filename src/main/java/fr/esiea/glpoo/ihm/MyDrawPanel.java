@@ -8,11 +8,9 @@ import javax.swing.JPanel;
 import fr.esiea.glpoo.tirage.Tirage;
 
 public class MyDrawPanel extends JPanel {
-
 	private static final long serialVersionUID = 1L;
+
 	private int red, blue, green, depth;
-	@SuppressWarnings("unused")
-	private double angle;
 
 	public void paintComponent(Graphics g) {
 		g.setColor(new Color(red, green, blue));
@@ -31,13 +29,9 @@ public class MyDrawPanel extends JPanel {
 	}
 
 	public void setColor(Tirage tirage) {
-		red = tirage.getBoule1();
-		blue = tirage.getBoule2();
-		green = tirage.getBoule3();
-	}
-
-	public void setAngle(Tirage tirage) {
-		angle = tirage.getBoule4() + tirage.getBoule5();
+		red = tirage.getBoule1() * 4;
+		blue = tirage.getBoule2() * 4;
+		green = tirage.getBoule3() * 4;
 	}
 
 	public void setDepth(Tirage tirage) {
