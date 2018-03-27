@@ -86,7 +86,7 @@ public class Tree extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			log.debug("ici actionPerformed");
+			log.info("ici actionPerformed");
 			int value = rand.nextInt(70);
 			log.debug("random effctuer " + value);
 			tirageEnCours = tirages.get(value);
@@ -112,7 +112,7 @@ public class Tree extends JFrame {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO save as a png our fractal tree
-			log.info("soon....");
+			log.info("ici action Performed Save as PNG soon....");
 			/*
 			 * JFileChooser chooser = new JFileChooser(); int retval =
 			 * chooser.showSaveDialog(btn_save); if(retval == JFileChooser.APPROVE_OPTION) {
