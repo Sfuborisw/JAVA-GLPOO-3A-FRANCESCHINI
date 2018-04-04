@@ -36,6 +36,7 @@ TODO LIST :
 	- [x] Main Menu
 		- [x] Go to Tree button
 		- [x] Go to Triangle button
+		- [x] Show Data Table from CSV
 		- [x] Exit button
 	- [ ] Tree
 		- [x] Draw Panel
