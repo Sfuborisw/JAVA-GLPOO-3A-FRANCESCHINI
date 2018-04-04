@@ -18,7 +18,7 @@ Project Goal :
 What we are going to do :
 =====================
 
-We are hoping to create Fractal Tree and Sierpinski Triangle in function of LOTO results.
+We hope the function creates Fractal Trees and Sierpinski Triangles as the Lotto results.
 
 There are some preview of our application : 
 
