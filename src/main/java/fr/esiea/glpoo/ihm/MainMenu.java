@@ -20,7 +20,7 @@ public class MainMenu extends JFrame {
 
 	JFrame frame;
 	JPanel panel;
-	JButton btn_tree, btn_triangle, btn_exit;
+	JButton btn_tree, btn_triangle, btn_table ,btn_exit;
 
 	public MainMenu() {
 		ImageIcon img = new ImageIcon("src/main/resources/bingo.png");
@@ -32,7 +32,9 @@ public class MainMenu extends JFrame {
 
 		btn_tree = new JButton(new GoToTree());
 		btn_triangle = new JButton(new GoToTriangle());
+		btn_table = new JButton(new ShowTable());
 		btn_exit = new JButton(new ExitProg());
+		
 
 		final JPanel colonneButton = new JPanel();
 		colonneButton.setLayout(null);
@@ -40,10 +42,13 @@ public class MainMenu extends JFrame {
 
 		btn_tree.setBounds((frame.getSize().height / 2), 30, 200, 100);
 		btn_triangle.setBounds((frame.getSize().height / 2), 130, 200, 100);
-		btn_exit.setBounds((frame.getSize().height / 2), 230, 200, 100);
+		btn_table.setBounds((frame.getSize().height / 2), 230, 200, 100);
+		btn_exit.setBounds((frame.getSize().height / 2), 330, 200, 25);
+		
 
 		colonneButton.add(btn_tree);
 		colonneButton.add(btn_triangle);
+		colonneButton.add(btn_table);
 		colonneButton.add(btn_exit);
 
 		frame.getContentPane().add(colonneButton);
@@ -88,6 +93,28 @@ public class MainMenu extends JFrame {
 			try {
 				@SuppressWarnings("unused")
 				final Triangle triange = new Triangle();
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+			frame.dispose();
+		}
+		
+	}
+	
+	private class ShowTable extends AbstractAction {
+
+		private static final long serialVersionUID = 1L;
+
+		public ShowTable() {
+			super("Afficher la table des données");
+		}
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			log.debug("Ici on lance la table de données");
+			try {
+				final Table fenetre = new Table();
+				fenetre.setVisible(true);
 			} catch (Exception e1) {
 				e1.printStackTrace();
 			}

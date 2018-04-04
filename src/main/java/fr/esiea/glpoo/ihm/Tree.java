@@ -5,12 +5,15 @@ import java.awt.Color;
 import java.awt.Desktop;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.List;
 import java.util.Random;
 
+import javax.imageio.ImageIO;
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -123,6 +126,16 @@ public class Tree extends JFrame {
 			 * Desktop.getDesktop().open(file); } catch (Exception except) {
 			 * except.printStackTrace(); } }
 			 */
+			BufferedImage image = new BufferedImage(DrawPanel.getSize().width, DrawPanel.getSize().height,
+					BufferedImage.TYPE_INT_RGB);
+			DrawPanel.paint(image.getGraphics());
+			try {
+				ImageIO.write(image, ".png", new File("src/main/resources/screen.png"));
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+
 		}
 
 	}
